@@ -1,0 +1,332 @@
+/* 基础配置 */
+@font-face {
+  font-family: 'pfr';
+  src: url('font/pfr.eot');
+  src:
+    url('font/pfr.eot?#font-spider') format('embedded-opentype'),
+    url('font/pfr.woff') format('woff'),
+    url('font/pfr.ttf') format('truetype'),
+    url('font/pfr.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clearfloat{
+  zoom: 1;
+}
+.clearfloat:after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* 配置结束 */
+
+body,html {
+  width: 100%;
+  height: 100%;
+  min-width: 1100px;
+  overflow: hidden;
+  font-family: "pfr";
+}
+
+/* 左侧侧栏 */
+.left-aside {
+  position: absolute;
+  width: 18%;
+  min-width: 200px;
+  height: 100%;
+  z-index: 9999;
+  left:-18%;
+  /* opacity: 0; */
+  overflow: hidden;
+}         
+
+@media screen and (max-width:1110px) {
+  .left-aside {
+    left: -200px;
+  }
+}
+
+.left-aside .logo{
+  width: 100%;
+}
+
+.left-aside ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.left-aside .one {
+  margin-top: 7rem;
+}
+
+.left-aside .one-item { 
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.left-aside .one-item a {
+  color: #c73237;
+  text-decoration: none;
+}
+.left-aside .two {
+  overflow: hidden;
+  
+}
+.left-aside .two.sleep{
+  height: 0;
+}
+
+.left-aside .two-item {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #bfbfbf;
+  padding-left: 40%;
+  margin-top: 10px;
+}
+
+.left-aside .two-item a {
+  color: #bfbfbf;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.left-aside .one-item.active:before {
+  position: absolute;
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url('../images/list.png') no-repeat center center;
+  background-size: contain;
+  left: 2.5rem;
+}
+
+
+.left-aside .footer {
+  font-size: 0.5rem;
+  color: #a0a0a0;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* 首页 */
+
+.page1 .i_mainbody{
+  position: relative;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/index-bg.jpg') center bottom no-repeat;
+  background-size: cover;
+}
+
+.page1 .i_mainbody .shrink{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('../images/index-shrink.png') center center no-repeat;
+  background-size: contain;
+  left: 30px;
+  top: 40px;
+  cursor: pointer;
+}
+
+.page1 .i_mainbody .title {
+  top: 20%;
+  position: relative;
+  width: 22rem;
+  height: 22rem;
+  background: url("../images/title.png") no-repeat center center;
+  background-size: contain;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.page1 .i_mainbody .btn {
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 18rem;
+  height: 3rem;
+  background: url("../images/btbg.jpg") no-repeat left center;
+  background-size: cover;
+  cursor: pointer;
+  color: #fff;
+  left: 50%;
+  margin-left: -9rem;
+  opacity: 0;
+}
+
+.page1 .i_mainbody .btn span:first-child{
+  display:inline-block;
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.2rem;
+} 
+.page1 .i_mainbody .btn span:last-child{
+  display:inline-block;
+  width: 65%;
+  height: 100%;
+  text-align: center;
+  line-height: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.274);
+  font-size: 0.9rem;
+} 
+
+.page1 .i_mainbody .silde {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  line-height: .6rem;
+  left: 50%;
+  margin-left: -25px;
+  animation: blingbling 3s infinite;
+  width: 50px;
+  bottom: 0rem;
+}
+
+
+@keyframes blingbling {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .3;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+/* 中间版 */
+.mainbody{
+  position: relative;
+  left: 18%;
+  width: 82%;
+  height: 100%;
+  background: url('../images/mainbody-bg.jpg') center bottom no-repeat;
+  background-size: cover;
+}
+
+.mainbody .cart {
+  position: relative;
+  top: 2rem;
+  opacity: 0;
+  width: 80%;
+  height: 40rem;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.mainbody .cart .title {
+  border-radius: 1rem 1rem 0 0;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  color: #fff;
+  background: url("../images/title-bg.jpg") left center  no-repeat;
+  background-size: cover;
+}
+.mainbody .cart .description {
+  box-sizing: border-box;
+  padding:4rem 7rem;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+
+.red {
+  color: #ff5959;
+  font-weight: bold;
+}
+
+/* 最后版 */
+
+.page8 .content {
+  position: relative;
+  height: 100%;
+  left: 18%;
+  width: 82%;
+  background: url('../images/do-bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.content .box {
+  margin: 0 auto;
+  position: relative;
+  width: 60%;
+  height: 14rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  opacity: 0; 
+}
+.content .box1 {
+  top: 10rem;
+}
+.content .box .title {
+  position: relative;
+  height: 2rem;
+  font-size: 1.2rem;
+  color: #3c1d0f;
+  /* background: url('../images/do-list.png') no-repeat left top;
+  background-size: contain; */
+  width: 10rem;
+  line-height: 1.8rem;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  text-indent: 2rem;
+  font-weight: bold;
+}
+.content .box .title img {
+  position: absolute;
+  height: 1.5rem;
+  left: 0;
+  top: 2px;
+}
+.content .leftbox {
+  padding-top: 1.5rem;
+}
+.content .leftbox p {
+  font-size: .6rem;
+  color: #3c1d0f;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+
+.content .leftbox {
+  width: 50%;
+  float: left;
+}
+.content .rightbox {
+  position: relative;
+  width: 45%;
+  float: left;
+  height: 5rem;
+  background: url('../images/btn-down.jpg') no-repeat center center;
+  background-size: contain;
+}
+.content .rightbox p{
+  position: relative;
+  color: #fff;
+  font-size: .9rem;
+  left: 30%;
+  line-height: .3rem;
+  top: .9rem;
+  font-weight: bold;
+}
+
+.content .rightbox .s{
+  font-size: .7rem;
+  font-weight: normal;
+}
+.content .box2{
+  top: 12rem;
+}
